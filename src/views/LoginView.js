@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { loginUser } from '../services/userServices'
 import LoginForm from '../components/LoginForm'
-import { Grid } from '@material-ui/core/Grid'
+import Grid from '@material-ui/core/Grid'
 import { AuthContext } from '../context/AuthContext'
 
 function LoginView() {

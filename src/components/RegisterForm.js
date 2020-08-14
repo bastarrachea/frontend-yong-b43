@@ -1,41 +1,37 @@
-import React from 'react'
-import {
-    TextField,
-    Grid,
-    Card,
-    Box,
-    Button,
-    Typography
-} from '@material-ui/core'
 
-function RegisterForm({ onSubmit, onType }) {
-    return(
-    <Grid item xs={12} md={6} lg={4}>
-        <Card>
-            <Box p={3}>
-                <Typography variant='h5' color='initial'>
-                    Register Form
-                </Typography>
-                <Box my={2}>
-                    <TextField onChange={onType} fullWidth id='name' label='Name' />
-                </Box>
-                <Box my={2}>
-                    <TextField onChange={onType} fullWidth id='lastName' label='Last Name' />
-                </Box>
-                <Box my={2}>
-                    <TextField onChange={onType} fullWidth id='email' label='Email' />
-                </Box>
-                <Box my={2}>
-                    <TextField onChange={onType} fullWidth id='password' label='Password' />
-                </Box>
-                <Box>
-                    <Button onClick={onSubmit} mt={3} variant='contained' color='primary'>
-                        Register
-                    </Button>
-                </Box>
-            </Box>
-        </Card>
-    </Grid>
+import React from "react";
+
+
+function RegisterForm() {
+    return (
+        <form className='.mr-3'>
+        <h3>Sign Up</h3>
+
+        <div className="form-group">
+            <label>First name</label>
+            <input type="text" className="form-control" placeholder="First name" />
+        </div>
+
+        <div className="form-group">
+            <label>Last name</label>
+            <input type="text" className="form-control" placeholder="Last name" />
+        </div>
+
+        <div className="form-group">
+            <label>Email address</label>
+            <input type="email" className="form-control" placeholder="Enter email" />
+        </div>
+
+        <div className="form-group">
+            <label>Password</label>
+            <input type="password" className="form-control" placeholder="Enter password" />
+        </div>
+
+        <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+        
+    
+
+    </form>
     )
 }
 

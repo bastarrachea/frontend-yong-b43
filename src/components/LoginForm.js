@@ -1,45 +1,29 @@
-import React from "react"
-import {
-  TextField,
-  Grid,
-  Card,
-  Box,
-  Button,
-  Typography,
-} from "@material-ui/core"
+import React from 'react';
 
-function LoginForm({ onSubmit, onType }) {
+
+function LoginForm() {
   return (
-    <Grid item xs={12} md={6} lg={4}>
-      <Card>
-        <Box p={3}>
-          <Typography variant="h5" color="initial">
-            Log in
-          </Typography>
-          <Box my={2}>
-            <TextField onChange={onType} fullWidth id="email" label="Email" />
-          </Box>
-          <Box my={2}>
-            <TextField
-              onChange={onType}
-              type="password"
-              fullWidth
-              id="password"
-              label="Password"
-            />
-          </Box>
-          <Button
-            onClick={onSubmit}
-            mt={3}
-            variant="contained"
-            color="primary"
-            fullWidth
-          >
-            Log in
-          </Button>
-        </Box>
-      </Card>
-    </Grid>
+    <form className= 'd-flex-horizontal'>
+      <h3>Inicia Sesión</h3>
+
+      <div className="form-group">
+        <label>Correo Electrónico</label>
+        <input type="email" className="form-control" placeholder="Enter email" />
+      </div>
+
+      <div className="form-group">
+        <label>Contraseña</label>
+        <input type="password" className="form-control" placeholder="Enter password" />
+      </div>
+
+      <button type="submit" className="btn btn-secondary btn-block ">Entrar</button>
+
+        
+
+    </form>
+
+    
+
   )
 }
 
